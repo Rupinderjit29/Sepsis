@@ -1,6 +1,6 @@
-
 numba
 pandas
 model_selection
 scikit-learn==1.0.2
 numpy
+sklearn.ensemble
