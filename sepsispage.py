@@ -14,12 +14,18 @@ loaded_model=pickle.load(open('sepsis_trained_model.sav','rb'))
 
 
 def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
-    t_hr=(float(Temp)> 38.5 or float(Temp) < 35) and  float(HR) > 90   
-    t_re_pa=(float(Temp)> 38.5 or float(Temp) < 35) and (float(Resp)>20 or float(PaCO2) <32)
-    t_wbc=(float(Temp)> 38.5 or float(Temp) < 35) and (float(WBC)>10)
-    hr_re_pa= float(HR) > 90  and (float(Resp)>20 or float(PaCO2) <32)
-    hr_wbc= float(HR) > 90  and (float(WBC)>10)
-    re_pa_wbc=(float(Resp)>20 or float(PaCO2) <32) and (float(WBC)>10)
+    #t_hr=(float(Temp)> 38.5 or float(Temp) < 35) and  float(HR) > 90   
+    #t_re_pa=(float(Temp)> 38.5 or float(Temp) < 35) and (float(Resp)>20 or float(PaCO2) <32)
+    #t_wbc=(float(Temp)> 38.5 or float(Temp) < 35) and (float(WBC)>10)
+    #hr_re_pa= float(HR) > 90  and (float(Resp)>20 or float(PaCO2) <32)
+    #hr_wbc= float(HR) > 90  and (float(WBC)>10)
+    #re_pa_wbc=(float(Resp)>20 or float(PaCO2) <32) and (float(WBC)>10)
+    t_hr=(Temp> 38.5 or Temp < 35) and  HR > 90   
+    t_re_pa=(Temp> 38.5 or Temp < 35) and (Resp>20 or PaCO2<32)
+    #t_wbc=(float(Temp)> 38.5 or float(Temp) < 35) and (float(WBC)>10)
+    #hr_re_pa= float(HR) > 90  and (float(Resp)>20 or float(PaCO2) <32)
+    #hr_wbc= float(HR) > 90  and (float(WBC)>10)
+    #re_pa_wbc=(float(Resp)>20 or float(PaCO2) <32) and (float(WBC)>10)
     sirs=(t_hr==True)or (t_re_pa==True)or (t_wbc==True)or (hr_re_pa==True)or (hr_wbc==True) or (re_pa_wbc==True)
     return sirs
 
@@ -45,18 +51,18 @@ def main():
         st.header('Prediction of SIRS, Sepsis, Severe Sepsis')
         col1, col2,col3 = st.columns((1,1,1))
         with col1:
-            Age = st.text_input('Age',help='years')
+            Age =float( st.text_input('Age',help='years'))
         with col2:
-            Temp = st.text_input('Temperature', help=' °C')
+            Temp =float( st.text_input('Temperature', help=' °C'))
         with col3:
-             HR=st.text_input('Heart Rate', help='beats/min')
+             HR=float(st.text_input('Heart Rate', help='beats/min'))
         col4,col5,col6 = st.columns((1,1,1))
         with col4:
-            Resp = st.text_input('Respiration', help='breaths/min')
+            Resp = float(st.text_input('Respiration', help='breaths/min'))
         with col5:
-            WBC = st.text_input('WBC', help='% immature band form')
+            WBC = float(st.text_input('WBC', help='% immature band form'))
         with col6:
-             PaCO2=st.text_input('PaCO2',help='mm/Hg')    
+             PaCO2=float(st.text_input('PaCO2',help='mm/Hg'))    
         #t_hr=(float(Temp)> 38.5 or float(Temp) < 35) and  float(HR) > 90   
         #t_re_pa=(float(Temp)> 38.5 or float(Temp) < 35) and (float(Resp)>20 or float(PaCO2) <32)
         #t_wbc=(float(Temp)> 38.5 or float(Temp) < 35) and (float(WBC)>10)
