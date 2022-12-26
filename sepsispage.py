@@ -10,7 +10,7 @@ import streamlit as st
 import pandas as pd
 import base64
 
-loaded_model=pickle.load(open('C:/Users/Iqbal/Desktop/web/sepsis_trained_model.sav','rb'))
+loaded_model=pickle.load(open('sepsis_trained_model.sav','rb'))
 
 
 def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
