@@ -3,4 +3,3 @@ pandas
 model_selection
 scikit-learn==1.0.2
 numpy
-scikit-learn.ensemble==1.0.2
