@@ -3,4 +3,4 @@ pandas
 model_selection
 scikit-learn==1.0.2
 numpy
-sklearn.ensemble.RandomForestClassifier
+sklearn.ensemble.RandomForestClassifier==1.0.2
