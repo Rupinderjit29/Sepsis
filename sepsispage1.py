@@ -29,7 +29,7 @@ def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
 def main():
     st.set_page_config(layout="wide")  
     image1 = Image.open('sepsis_motality.PNG')
-    image2=Image.open('Category_sepsis.PNG')
+    image2=Image.open('category_sepsis.PNG')
     #st.image(image,width=700)
     def title(url):
        st.markdown(f'<p style="background-color:#c0c0c0;color:#ff0000;font-size:38px;text-align: center;border: 1px solid black;border-width: 2px;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
