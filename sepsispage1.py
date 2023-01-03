@@ -206,7 +206,7 @@ def main():
                  FiO2= st.number_input('FiO2',help='breaths/min')   
             col9, col10,col11= st.columns((1,1,1))
             with col9:
-                 pH= st.number_input('pH',help='breaths/min')   
+                 pH= st.number_input('pH',help='breaths/mn')   
             with col10:
                  BaseExcess= st.number_input('BaseExcess',help='breaths/min')  
             with col11:
