@@ -162,7 +162,7 @@ def main():
     #st.write('Stage one: Systemic Inflammatory Response Syndrome (SIRS)Sepsis can be hard to identify, but is typically denoted by a very high or low body temperature, high heart rate, high respiratory rate, high or low white blood cell count and a known or suspected infection. The aforementioned signs are actually used to identify Systemic Inflammatory Response Syndrome (SIRS), which only becomes sepsis when an infection is present.SIRS is, in some circles, a more commonly used term because sepsis is only seen as a subcategory of SIRS. For sepsis, two of the mentioned SIRS signs, as well as an infection, need to be present.')
     #st.write('Stage two: severe sepsisThe second stage, called severe sepsis, is diagnosed when acute organ dysfunction begins. Severe sepsis can also be diagnosed when sepsis is present along with hypotension (low blood pressure) or hypoperfusion (decreased blood flow through an organ).')
     #st.write('Stage three: septic shock Septic shock is the most severe stage of sepsis. It is defined as the presence of hypotension, induced by sepsis, despite fluid resuscitation. In addition, perfusion abnormalities such as elevated lactate levels. Septic shock has the highest chance of mortality, with estimates ranging from 30% to 50%.')
-    with st.sidebar:
+    with st.sidebar(width=300):
         st.header('Prediction of SIRS, Sepsis, Severe Sepsis')
         col1, col2 = st.columns((1,1))
         with col1:
