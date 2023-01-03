@@ -32,7 +32,7 @@ def main():
     image2=Image.open('category_sepsis.PNG')
     #st.image(image,width=700)
     def title(url):
-       st.markdown(f'<p style="background-color:#c0c0c0;color:#ff0000;font-size:38px;text-align: center;border: 1px solid black;border-width: 2px;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
+       st.markdown(f'<p style="background-color:#c0c0c0;color:#8b0000;font-size:38px;text-align: center;border: 1px solid black;border-width: 2px;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
     def title1(url):
        st.markdown(f'<p style="background-color:#c0c0c0;color:#8b0000 ;font-size:26px;text-align: center;border: 1px solid black;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
     def title2(url):
@@ -199,23 +199,23 @@ def main():
         if ab==True:
             col6,col7,col8= st.columns((1,1,1))
             with col6:
-                MAP= st.number_input('MAP')    
+                MAP= st.number_input('MAP',help='breaths/min')    
             with col7:
-                BUN= st.number_input('BUN')
+                BUN= st.number_input('BUN',help='breaths/min')
             with col8:
-                 FiO2= st.number_input('FiO2')   
+                 FiO2= st.number_input('FiO2',help='breaths/min')   
             col9, col10,col11= st.columns((1,1,1))
             with col9:
-                 pH= st.number_input('pH')   
+                 pH= st.number_input('pH',help='breaths/min')   
             with col10:
-                 BaseExcess= st.number_input('BaseExcess')  
+                 BaseExcess= st.number_input('BaseExcess',help='breaths/min')  
             with col11:
-                  Calcium= st.number_input('Calcium')   
+                  Calcium= st.number_input('Calcium',help='breaths/min')   
             col12, col13 = st.columns((1,1))
             with col12:
-                Creatinine= st.number_input('Creatinine') 
+                Creatinine= st.number_input('Creatinine',help='breaths/min') 
             with col13:
-                 Platelets= st.number_input(' Platelets')
+                 Platelets= st.number_input(' Platelets',help='breaths/min')
             
                  
            
@@ -230,9 +230,9 @@ def main():
             st.write('To predict severe sepsis amd septic shock, enter the below information')      
             col20, col21 = st.columns((1,1)) 
             with col20:
-                 Lactate= st.number_input("Lactate") 
+                 Lactate= st.number_input("Lactate",help='breaths/min') 
             with col21:
-                 SBP= st.number_input('SBP')    
+                 SBP= st.number_input('SBP',help='breaths/min')    
             organ=st.radio('Is there any organ damage?', ['Yes', 'No']) 
             if st.button('Predict Sever Sepsis'):
                 if (organ=='Yes') and (float(Lactate)>4) and (float(SBP)<90) : 
