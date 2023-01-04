@@ -98,7 +98,7 @@ def main():
     colstage1,colstage11=st.columns((0.2,1))
     with colstage1:
         title2('SIRS') 
-    colstage1_1,colstage11_1=st.columns((1,1))    
+    colstage1_1,colstage11_1=st.columns((0.8,1))    
     with colstage1_1:
         write2(' Systemic Inflammatory Response Syndrome. It is a clinical syndrome caused by inflammation and wid espread tissue injury.Identifying SIRS in a patient include the following criteria:')
         st.markdown(
@@ -108,6 +108,8 @@ def main():
           - Respiratory rate >20 breaths/min or PaCO2 <32 mmHg 
           - WBC >12,000 cells/mm3 or < 4000 cells/mm3, or >10 percent immature (band) forms 
           """ )
+    with colstage11_1:  
+        st.image(image2)
     
     colstage2,colstage22=st.columns((0.2,1))
     with colstage2:
