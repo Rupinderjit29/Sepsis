@@ -127,6 +127,7 @@ def main():
       - Lactate > 4 mmol 
       - Organ damage
         """ )
+        st.write('#')
     
     colstage4,colstage44=st.columns((0.3,1))
     with colstage4:
