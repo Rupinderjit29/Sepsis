@@ -11,7 +11,7 @@ import pandas as pd
 import base64
 from PIL import Image
 
-loaded_model=pickle.load(open('C:/Users/Rupinder/Downloads/sepsis_trained_model.sav','rb'))
+loaded_model=pickle.load(open('sepsis_trained_model.sav','rb'))
 
 
 def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
