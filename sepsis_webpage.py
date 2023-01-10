@@ -44,6 +44,8 @@ def main():
        st.markdown(f'<p style="background-color:#c0c0c0;color:#8b0000 ;font-size:26px;text-align: center;border: 1px solid black;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
     def title2(url):
        st.markdown(f'<p style="background-color:#eee8aa;color:#8b0000 ;font-size:24px;text-align: center;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
+    def title3(url):
+       st.markdown(f'<p style="background-color:#8fbc8f;color:#8b0000 ;font-size:18px;text-align: center;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
     
     def subtitle(url):
         st.markdown(f'<p style="background-color:#dcdcdc ;color:Black;font-size:22px;text-align: left;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
@@ -60,7 +62,8 @@ def main():
         subtitle('Overview')
     
     write2('Sepsis is an extreme response to an infection by the body. It happens when an existing infection triggers a chain reaction throughout your body. In most of the cases, infections in the lung, urinary tract, skin, or gastrointestinal tract leads to sepsis. It can also be a result of other infections, such as COVID-19, influenza, or fungal infections. Delay in the treatment of sepsis can rapidly lead to tissue damage, organ failure, and even death.')
-    title2("For the prediction of SIRS, Sepsis and Septic Shock, click on [Link](https://rupinderjit29-sepsis-prediction-sepsis-ghy2gk.streamlit.app/)")
+    title2("For the prediction of SIRS, Sepsis and Septic Shock, click on belo link")
+    st.write("[Link](https://rupinderjit29-sepsis-prediction-sepsis-ghy2gk.streamlit.app/)")
     
     col_sign,col_sign1=st.columns((0.6,1)) 
     with col_sign:
