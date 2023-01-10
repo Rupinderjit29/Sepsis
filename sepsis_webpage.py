@@ -11,7 +11,7 @@ import pandas as pd
 import base64
 from PIL import Image
 
-loaded_model=pickle.load(open('C:/Users/Rupinder/Downloads/sepsis_trained_model.sav','rb'))
+loaded_model=pickle.load(open('sepsis_trained_model.sav','rb'))
 
 
 def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
@@ -28,13 +28,13 @@ def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
 
 def main():
     st.set_page_config(layout="wide")  
-    image1 = Image.open('C:/Users/Rupinder/Downloads/2.png')
+    image1 = Image.open('2.png')
     image1=image1.resize((350,300))
     
-    image2=Image.open('C:/Users/Rupinder/Downloads/Sepsis Six.png')
+    image2=Image.open('Sepsis Six.png')
     image2=image2.resize((350,250))
     
-    image3=Image.open('C:/Users/Rupinder/Downloads/1.png')
+    image3=Image.open('1.png')
     image3=image3.resize((425,300))
     
     def title(url):
