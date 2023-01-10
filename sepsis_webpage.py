@@ -27,7 +27,7 @@ def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
 
 
 def main():
-    st.set_page_config(layout="wide")  
+    #st.set_page_config(layout="wide")  
     image1 = Image.open('2.png')
     image1=image1.resize((350,300))
     
