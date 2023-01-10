@@ -64,7 +64,7 @@ def main():
     with col_sign:
         subtitle('Signs & Symptoms of Sepsis')
     
-    write2('Most often, infection that turns into Sepsis, occurs in the patients who are hospitalized for a while and are in the Intensive care Unit. Symptoms of sepsis are not confined to the following list.')
+    write2('Most often, infection that turns into Sepsis, occurs in the patients who are hospitalized for a while and are in the Intensive Care Unit. Symptoms of sepsis are not confined to the following list.')
     
     colc,cold=st.columns((1,1))
     with colc:
