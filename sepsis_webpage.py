@@ -28,7 +28,7 @@ def predict_sirs(Temp,HR,Resp,WBC,PaCO2):
 
 def main():
     #st.set_page_config(layout="wide") 
-    st.caption('For the prediction of SIRS, Sepsis and Severe Sepsis, click the > icon on the top left corner, if the side window is not visible') 
+    #st.caption('For the prediction of SIRS, Sepsis and Severe Sepsis, click the > icon on the top left corner, if the side window is not visible') 
     image1 = Image.open('2.png')
     image1=image1.resize((350,300))
     
