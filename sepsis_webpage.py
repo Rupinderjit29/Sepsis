@@ -202,7 +202,7 @@ def main():
             ab=predict_sirs(float(Temp),float(HR),float(Resp),float(WBC),float(PaCO2))
             if ab==True:
                 st.success('Diagonosed with SIRS and may have sepsis.')
-                st.caption('_If nothing is displayed press enter key_')
+                st.caption('_If further fields are not displayed, then press enter key :hash:_')
   #              lab=st.radio('Would you like to predict sepsis?', ['Yes', 'No'],index=1)         
             else: 
                 st.success('Not diagonosed with SIRS.')
